@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		28AA93CD267F610600D33F25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA93CC267F610600D33F25 /* AppDelegate.swift */; };
 		28AA93CF267F610600D33F25 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA93CE267F610600D33F25 /* SceneDelegate.swift */; };
-		28AA93D1267F610600D33F25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA93D0267F610600D33F25 /* ViewController.swift */; };
-		28AA93D4267F610600D33F25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28AA93D2267F610600D33F25 /* Main.storyboard */; };
 		28AA93D6267F610800D33F25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28AA93D5267F610800D33F25 /* Assets.xcassets */; };
 		28AA93D9267F610800D33F25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28AA93D7267F610800D33F25 /* LaunchScreen.storyboard */; };
 		28AA93E4267F610800D33F25 /* MusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AA93E3267F610800D33F25 /* MusicAppTests.swift */; };
@@ -38,8 +36,6 @@
 		28AA93C9267F610600D33F25 /* MusicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28AA93CC267F610600D33F25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28AA93CE267F610600D33F25 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		28AA93D0267F610600D33F25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		28AA93D3267F610600D33F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28AA93D5267F610800D33F25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28AA93D8267F610800D33F25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28AA93DA267F610800D33F25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +95,10 @@
 		28AA93CB267F610600D33F25 /* MusicApp */ = {
 			isa = PBXGroup;
 			children = (
-				28AA93CC267F610600D33F25 /* AppDelegate.swift */,
-				28AA93CE267F610600D33F25 /* SceneDelegate.swift */,
-				28AA93D0267F610600D33F25 /* ViewController.swift */,
-				28AA93D2267F610600D33F25 /* Main.storyboard */,
-				28AA93D5267F610800D33F25 /* Assets.xcassets */,
-				28AA93D7267F610800D33F25 /* LaunchScreen.storyboard */,
-				28AA93DA267F610800D33F25 /* Info.plist */,
+				28AA93FF267F6DB800D33F25 /* App */,
+				28AA9403267F6E1100D33F25 /* Core */,
+				28AA9404267F6E1D00D33F25 /* Resources */,
+				28AA9405267F6E7900D33F25 /* Environments  */,
 			);
 			path = MusicApp;
 			sourceTree = "<group>";
@@ -126,6 +119,55 @@
 				28AA93F0267F610800D33F25 /* Info.plist */,
 			);
 			path = MusicAppUITests;
+			sourceTree = "<group>";
+		};
+		28AA93FF267F6DB800D33F25 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				28AA93CC267F610600D33F25 /* AppDelegate.swift */,
+				28AA93CE267F610600D33F25 /* SceneDelegate.swift */,
+				28AA9400267F6DD900D33F25 /* Entity */,
+				28AA9402267F6E0000D33F25 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		28AA9400267F6DD900D33F25 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		28AA9402267F6E0000D33F25 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		28AA9403267F6E1100D33F25 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		28AA9404267F6E1D00D33F25 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				28AA93D5267F610800D33F25 /* Assets.xcassets */,
+				28AA93D7267F610800D33F25 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		28AA9405267F6E7900D33F25 /* Environments  */ = {
+			isa = PBXGroup;
+			children = (
+				28AA93DA267F610800D33F25 /* Info.plist */,
+			);
+			path = "Environments ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +275,6 @@
 			files = (
 				28AA93D9267F610800D33F25 /* LaunchScreen.storyboard in Resources */,
 				28AA93D6267F610800D33F25 /* Assets.xcassets in Resources */,
-				28AA93D4267F610600D33F25 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28AA93D1267F610600D33F25 /* ViewController.swift in Sources */,
 				28AA93CD267F610600D33F25 /* AppDelegate.swift in Sources */,
 				28AA93CF267F610600D33F25 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,14 +336,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		28AA93D2267F610600D33F25 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28AA93D3267F610600D33F25 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		28AA93D7267F610800D33F25 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8545KP6MGS;
-				INFOPLIST_FILE = MusicApp/Info.plist;
+				INFOPLIST_FILE = "MusicApp/Environments /Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8545KP6MGS;
-				INFOPLIST_FILE = MusicApp/Info.plist;
+				INFOPLIST_FILE = "MusicApp/Environments /Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
