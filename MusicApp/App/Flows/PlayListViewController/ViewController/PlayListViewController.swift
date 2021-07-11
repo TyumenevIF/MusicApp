@@ -12,6 +12,7 @@ class PlayListViewController: UIViewController, UITableViewDataSource, UITableVi
     private let songs = FakeSong.getSong()
     let playListTableView = UITableView()
 
+    // MARK: - ViewController Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableViewController()
@@ -39,7 +40,6 @@ class PlayListViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     // MARK: - Table view data source
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
@@ -58,5 +58,16 @@ class PlayListViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 50
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let position = indexPath.row
 
+        let playerController = PlayerViewController()
+        playerController.songs = songs
+        playerController.position = position
+        playerController.modalPresentationStyle = .automatic
+        self.present(playerController, animated: true, completion: nil)        
+    }
 }
