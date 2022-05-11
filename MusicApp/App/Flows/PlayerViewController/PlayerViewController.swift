@@ -66,8 +66,7 @@ class PlayerViewController: UIViewController {
             }
             player.volume = 0.5
             player.play()
-        }
-        catch {
+        } catch {
             print("Error ocurred")
         }
         
@@ -98,7 +97,7 @@ class PlayerViewController: UIViewController {
     // MARK: - didTapBackButton
     @objc func didTapBackButton() {
         if position > 0 {
-            position = position - 1
+            position -= 1
             player?.stop()
             
             for subview in holder.subviews {
@@ -111,7 +110,7 @@ class PlayerViewController: UIViewController {
     // MARK: - didTapNextButton
     @objc func didTapNextButton() {
         if position < (songs.count - 1) {
-            position = position + 1
+            position += 1
             player?.stop()
             
             for subview in holder.subviews {
@@ -126,5 +125,4 @@ class PlayerViewController: UIViewController {
         let value = slider.value
         player?.volume = value
     }
-    
 }

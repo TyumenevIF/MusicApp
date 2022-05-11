@@ -89,14 +89,14 @@ class PlayerView: UIView {
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setUI()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setUI() {
+    func setupViews() {
         addSubview(albumImageView)
         addSubview(songNameLabel)
         addSubview(artistNameLabel)
@@ -132,7 +132,7 @@ class PlayerView: UIView {
             
             volumeSlider.topAnchor.constraint(equalTo: playPauseButton.bottomAnchor, constant: 40),
             volumeSlider.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor, constant: 30),
-            volumeSlider.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -30),
+            volumeSlider.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor, constant: -30)
         ])
     }
     

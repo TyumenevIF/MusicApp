@@ -16,7 +16,7 @@ class PlayListViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableViewController()
-        setPlayListViewCell()
+        setPlayListTableViewCell()
         
         playListTableView.dataSource = self
         playListTableView.delegate = self
@@ -27,7 +27,7 @@ class PlayListViewController: UIViewController, UITableViewDataSource, UITableVi
         self.view.backgroundColor = .systemTeal
     }
     
-    func setPlayListViewCell() {
+    func setPlayListTableViewCell() {
         view.addSubview(playListTableView)
         playListTableView.translatesAutoresizingMaskIntoConstraints = false
         
